@@ -230,6 +230,8 @@ public class detailmenu4 extends javax.swing.JFrame {
         String cart1 = counter4.getText();
         int ordertext = Integer.parseInt(cart1);
         int order4 = ordertext * 35000;
+        String[] ordername = {"Alpukat Susu Banget"};
+        int[] counts = new int[counter44];
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void backbuttondm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttondm1ActionPerformed

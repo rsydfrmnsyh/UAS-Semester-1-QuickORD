@@ -238,6 +238,8 @@ int counter22 = 0;
         menu.setLocationRelativeTo(null);
         menu.setVisible(true);
         this.setVisible(false);
+        String[] ordername = {"Burger Banget"};
+        int[] counts = new int[counter22];
     }//GEN-LAST:event_backbuttondm1ActionPerformed
 
     private void forwardbuttondm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forwardbuttondm1ActionPerformed

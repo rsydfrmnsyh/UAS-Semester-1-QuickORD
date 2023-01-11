@@ -230,6 +230,8 @@ int counter55 = 0;
         String cart1 = counter5.getText();
         int ordertext = Integer.parseInt(cart1);
         int order5 = ordertext * 35000;
+        String[] ordername = {"Kopi Banget"};
+        int[] counts = new int[counter55];
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void backbuttondm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttondm1ActionPerformed

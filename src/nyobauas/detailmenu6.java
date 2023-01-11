@@ -237,6 +237,8 @@ int counter66 = 0;
         String cart1 = counter6.getText();
         int ordertext = Integer.parseInt(cart1);
         int order6 = ordertext * 35000;
+        String[] ordername = {"Fish & Chips"};
+        int[] counts = new int[counter66];
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void backbuttondm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttondm1ActionPerformed

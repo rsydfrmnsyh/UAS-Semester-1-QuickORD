@@ -4,6 +4,8 @@
  */
 package nyobauas;
 
+import java.lang.reflect.Array;
+
 /**
  * @author raihansltn
  * @author rasyf
@@ -354,6 +356,8 @@ int counter11 = 0;
         String cart1 = counter3.getText();
         int ordertext1 = Integer.parseInt(cart1);
         int order1 = ordertext1 * 35000;
+        String[] ordername = {"Paket Burger Banget"};
+        int[] counts = new int[counter11];
     }//GEN-LAST:event_jButton9ActionPerformed
 
     /**

@@ -230,6 +230,7 @@ int counter77 = 0;
         String cart1 = counter7.getText();
         int ordertext = Integer.parseInt(cart1);
         int order7 = ordertext * 35000;
+        String[] ordername = {"Hotdog Banget"};
         int[] counts = new int[counter77];
     }//GEN-LAST:event_jButton9ActionPerformed
 
