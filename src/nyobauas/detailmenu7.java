@@ -232,6 +232,7 @@ int counter77 = 0;
         int order7 = ordertext * 35000;
         String[] ordername = {"Hotdog Banget"};
         int[] counts = new int[counter77];
+        int harga7 = counter77 * 18000;
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void backbuttondm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttondm1ActionPerformed

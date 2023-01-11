@@ -240,6 +240,7 @@ int counter22 = 0;
         this.setVisible(false);
         String[] ordername = {"Burger Banget"};
         int[] counts = new int[counter22];
+        int price2 = counter22 * 20000;
     }//GEN-LAST:event_backbuttondm1ActionPerformed
 
     private void forwardbuttondm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forwardbuttondm1ActionPerformed

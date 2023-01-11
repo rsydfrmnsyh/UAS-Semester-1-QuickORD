@@ -48,6 +48,7 @@ int counter11 = 0;
         counter3 = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        cartbtn = new javax.swing.JButton();
         backbuttondm1 = new javax.swing.JButton();
         forwardbuttondm1 = new javax.swing.JButton();
 
@@ -182,6 +183,14 @@ int counter11 = 0;
             }
         });
 
+        cartbtn.setBackground(new java.awt.Color(255, 102, 0));
+        cartbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/shopping-cart.png"))); // NOI18N
+        cartbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cartbtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -202,6 +211,10 @@ int counter11 = 0;
                         .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(37, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cartbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,7 +236,9 @@ int counter11 = 0;
                             .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addComponent(cartbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17))
         );
 
         backbuttondm1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/undo.png"))); // NOI18N
@@ -358,7 +373,14 @@ int counter11 = 0;
         int order1 = ordertext1 * 35000;
         String[] ordername = {"Paket Burger Banget"};
         int[] counts = new int[counter11];
+        int price1 = counter11 * 35000;
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void cartbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartbtnActionPerformed
+        // TODO add your handling code here:
+      
+        
+    }//GEN-LAST:event_cartbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -397,6 +419,7 @@ int counter11 = 0;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backbuttondm1;
+    private javax.swing.JButton cartbtn;
     private javax.swing.JLabel counter2;
     private javax.swing.JLabel counter3;
     private javax.swing.JButton forwardbuttondm1;

@@ -232,6 +232,7 @@ int counter55 = 0;
         int order5 = ordertext * 35000;
         String[] ordername = {"Kopi Banget"};
         int[] counts = new int[counter55];
+        int price5 = counter55 * 8000;
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void backbuttondm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttondm1ActionPerformed
