@@ -9,7 +9,7 @@ package nyobauas;
  * @author rasyf
  */
 public class detailmenu6 extends javax.swing.JFrame {
-
+int counter66 = 0;
     /**
      * Creates new form detailmenu6
      */
@@ -216,25 +216,27 @@ public class detailmenu6 extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        counter66--;
         String count = counter6.getText();
         double countertext = Double.parseDouble(count);
         countertext--;
-        counter6.setText(count + " ");
+        counter6.setText(counter66 + " ");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        counter66++;
         String count = counter6.getText();
         double countertext = Double.parseDouble(count);
         countertext++;
-        counter6.setText(count + " ");
+        counter6.setText(counter66 + " ");
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
         String cart1 = counter6.getText();
-        double ordertext = Double.parseDouble(cart1);
-        double order = ordertext * 35000;
+        int ordertext = Integer.parseInt(cart1);
+        int order6 = ordertext * 35000;
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void backbuttondm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttondm1ActionPerformed

@@ -549,7 +549,6 @@ public class MenuView extends javax.swing.JFrame {
 
     private void forwardbuttonmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forwardbuttonmActionPerformed
         // TODO add your handling code here:
-        
     }//GEN-LAST:event_forwardbuttonmActionPerformed
 
     /**

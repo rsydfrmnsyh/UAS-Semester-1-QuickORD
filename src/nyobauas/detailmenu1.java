@@ -5,10 +5,11 @@
 package nyobauas;
 
 /**
- *
+ * @author raihansltn
  * @author rasyf
  */
 public class detailmenu1 extends javax.swing.JFrame {
+int counter11 = 0;
 
     /**
      * Creates new form menu1
@@ -16,7 +17,6 @@ public class detailmenu1 extends javax.swing.JFrame {
     public detailmenu1() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -258,7 +258,7 @@ public class detailmenu1 extends javax.swing.JFrame {
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(forwardbuttondm1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,7 +274,7 @@ public class detailmenu1 extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(172, 172, 172)
                                 .addComponent(backbuttondm1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(62, Short.MAX_VALUE))
+                        .addContainerGap(39, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(forwardbuttondm1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -285,11 +285,17 @@ public class detailmenu1 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -297,34 +303,37 @@ public class detailmenu1 extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        String count = counter1.getText();
+        
+        String count = counter3.getText();
         double countertext = Double.parseDouble(count);
         countertext--;
-        counter1.setText(count + " ");
+        counter3.setText(counter11 + " ");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        String count = counter1.getText();
+        String count = counter3.getText();
         double countertext = Double.parseDouble(count);
         countertext++;
-        counter1.setText(count + " ");
+        counter3.setText(count + " ");
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        String count = counter1.getText();
+        counter11--;
+        String count = counter3.getText();
         double countertext = Double.parseDouble(count);
         countertext--;
-        counter1.setText(count + " ");
+        counter3.setText(counter11 + " ");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        String count = counter1.getText();
+        counter11++;
+        String count = counter3.getText();
         double countertext = Double.parseDouble(count);
         countertext++;
-        counter.setText(count + " ");
+        counter3.setText(counter11 + " ");
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void backbuttondm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttondm1ActionPerformed
@@ -342,9 +351,9 @@ public class detailmenu1 extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        String cart1 = counter.getText();
-        double ordertext1 = Double.parseDouble(cart1);
-        double order = ordertext1 * 35000;
+        String cart1 = counter3.getText();
+        int ordertext1 = Integer.parseInt(cart1);
+        int order1 = ordertext1 * 35000;
     }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
@@ -384,22 +393,14 @@ public class detailmenu1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backbuttondm1;
-    private javax.swing.JLabel counter;
-    private javax.swing.JLabel counter1;
     private javax.swing.JLabel counter2;
     private javax.swing.JLabel counter3;
     private javax.swing.JButton forwardbuttondm1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -410,15 +411,7 @@ public class detailmenu1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables

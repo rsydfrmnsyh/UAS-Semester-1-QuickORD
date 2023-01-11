@@ -9,7 +9,7 @@ package nyobauas;
  * @author rasyf
  */
 public class detailmenu4 extends javax.swing.JFrame {
-
+    int counter44 = 0;
     /**
      * Creates new form detailmenu4
      */
@@ -50,7 +50,7 @@ public class detailmenu4 extends javax.swing.JFrame {
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel16.setText("????");
+        jLabel16.setText("Alpukat Susu Banget");
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 153, 0));
@@ -58,7 +58,7 @@ public class detailmenu4 extends javax.swing.JFrame {
         jLabel17.setText("Rp 15.000");
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel18.setText("???");
+        jLabel18.setText("Alpukat + Susu");
 
         jButton7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton7.setText("-");
@@ -209,25 +209,27 @@ public class detailmenu4 extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        counter44--;
         String count = counter4.getText();
         double countertext = Double.parseDouble(count);
         countertext--;
-        counter4.setText(count + " ");
+        counter4.setText(counter44 + " ");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        counter44++;
         String count = counter4.getText();
         double countertext = Double.parseDouble(count);
         countertext++;
-        counter4.setText(count + " ");
+        counter4.setText(counter44 + " ");
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
         String cart1 = counter4.getText();
-        double ordertext = Double.parseDouble(cart1);
-        double order = ordertext * 35000;
+        int ordertext = Integer.parseInt(cart1);
+        int order4 = ordertext * 35000;
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void backbuttondm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttondm1ActionPerformed
