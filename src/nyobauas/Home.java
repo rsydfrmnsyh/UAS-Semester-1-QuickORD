@@ -147,7 +147,7 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         String name = nameTextField.getText();
         
-        Tenant tenant = new Tenant();
+        Tenant tenant = new Tenant(name);
         tenant.setLocationRelativeTo(null);
         tenant.setVisible(true);
         this.setVisible(false);
