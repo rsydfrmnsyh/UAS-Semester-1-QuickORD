@@ -468,7 +468,10 @@ public class MenuView extends javax.swing.JFrame {
 
     private void menu1buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu1buttonActionPerformed
         // TODO add your handling code here:
-        
+        detailmenu1 dm1 = new detailmenu1();
+        dm1.setLocationRelativeTo(null);
+        dm1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_menu1buttonActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
@@ -477,26 +480,50 @@ public class MenuView extends javax.swing.JFrame {
 
     private void menu3buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu3buttonActionPerformed
         // TODO add your handling code here:
+        detailmenu3 dm3 = new detailmenu3();
+        dm3.setLocationRelativeTo(null);
+        dm3.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_menu3buttonActionPerformed
 
     private void menu4buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu4buttonActionPerformed
         // TODO add your handling code here:
+        detailmenu4 dm4 = new detailmenu4();
+        dm4.setLocationRelativeTo(null);
+        dm4.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_menu4buttonActionPerformed
 
     private void menu2buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu2buttonActionPerformed
         // TODO add your handling code here:
+        detailmenu2 dm2 = new detailmenu2();
+        dm2.setLocationRelativeTo(null);
+        dm2.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_menu2buttonActionPerformed
 
     private void menu5buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu5buttonActionPerformed
         // TODO add your handling code here:
+        detailmenu5 dm5 = new detailmenu5();
+        dm5.setLocationRelativeTo(null);
+        dm5.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_menu5buttonActionPerformed
 
     private void menu6buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu6buttonActionPerformed
         // TODO add your handling code here:
+        detailmenu6 dm6 = new detailmenu6();
+        dm6.setLocationRelativeTo(null);
+        dm6.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_menu6buttonActionPerformed
 
     private void menu7buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu7buttonActionPerformed
         // TODO add your handling code here:
+        detailmenu7 dm7 = new detailmenu7();
+        dm7.setLocationRelativeTo(null);
+        dm7.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_menu7buttonActionPerformed
 
     private void backbuttonmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttonmActionPerformed
