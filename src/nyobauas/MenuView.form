@@ -641,7 +641,7 @@
                   <Color blue="0" green="66" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/nyobauas/shopping-cart.png"/>
+                  <Image iconType="3" name="/images/shopping-cart.png"/>
                 </Property>
               </Properties>
             </Component>

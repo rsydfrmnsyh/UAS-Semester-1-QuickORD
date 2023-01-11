@@ -326,7 +326,7 @@ public class MenuView extends javax.swing.JFrame {
         );
 
         cartbtn.setBackground(new java.awt.Color(255, 102, 0));
-        cartbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nyobauas/shopping-cart.png"))); // NOI18N
+        cartbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/shopping-cart.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel117Layout = new javax.swing.GroupLayout(jPanel117);
         jPanel117.setLayout(jPanel117Layout);
@@ -541,7 +541,7 @@ public class MenuView extends javax.swing.JFrame {
 
     private void backbuttonmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttonmActionPerformed
         // TODO add your handling code here:
-        Tenant tenant = new Tenant();
+        Tenant tenant = new Tenant(null);
         tenant.setLocationRelativeTo(null);
         tenant.setVisible(true);
         this.setVisible(false);
