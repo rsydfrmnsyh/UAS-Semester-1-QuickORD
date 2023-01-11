@@ -179,9 +179,9 @@ public class Tenant extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        DetailTenant detailtenant = new DetailTenant();
-        detailtenant.setLocationRelativeTo(null);
-        detailtenant.setVisible(true);
+        MenuView menu = new MenuView();
+        menu.setLocationRelativeTo(null);
+        menu.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
