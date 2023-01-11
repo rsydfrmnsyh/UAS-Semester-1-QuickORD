@@ -55,7 +55,6 @@
                               <Component id="jLabel2" alignment="0" min="-2" pref="321" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="1" min="-2" pref="321" max="-2" attributes="0"/>
                               <Component id="jLabel5" alignment="0" min="-2" pref="267" max="-2" attributes="0"/>
-                              <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel8" alignment="0" min="-2" pref="181" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
@@ -63,6 +62,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btSubmit" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="jLabel6" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -122,7 +122,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Poppins ExtraBold" size="40" style="0"/>
+              <Font name="Segoe UI" size="40" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Find and Get"/>
           </Properties>
@@ -130,7 +130,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Poppins ExtraBold" size="40" style="0"/>
+              <Font name="Segoe UI" size="40" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Your FOOD!"/>
           </Properties>
