@@ -86,7 +86,7 @@ public class Receipt extends java.awt.Frame {
         receipt.setText(receipt.getText()+"*                                                 RECEIPT INFO                                                   *\n");
       
         
-        receipt.setText(receipt.getText()+ "Menu ordered: " + /*counter +*/ "\n");
+        receipt.setText(receipt.getText()+ "Menu ordered: " +  "\n");
         receipt.setText(receipt.getText()+ "Subtotal: " + /*subtotal +*/ "\n");
         
     }//GEN-LAST:event_jButton1ActionPerformed
