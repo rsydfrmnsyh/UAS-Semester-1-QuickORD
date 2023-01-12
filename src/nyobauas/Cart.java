@@ -136,12 +136,18 @@ int i = 0;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel)carttable.getModel();
-        do {
-            model.addRow(new Object[] {
+        for(int i = 0; i < name.size(); i++){
+            model.addRow(new Object[]{
                 name.get(i),
                 total.get(i)
             });
-        } while (i < 8);
+        }
+//        do {
+//            model.addRow(new Object[] {
+//                name.get(i),
+//                total.get(i)
+//            });
+//        } while (i < 8);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -1089,56 +1089,71 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         name1 = "Combo Burger Banget";
         price1 = count1 * 30000;
-        cart.name.add(name1);
-        cart.total.add(price1);
+        if(count1 != 0){
+            cart.name.add(name1);
+            cart.total.add(price1);
+        }
+
     }//GEN-LAST:event_cartbtn1ActionPerformed
 
     private void cartbtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartbtn2ActionPerformed
         // TODO add your handling code here:
         name2 = "Burger Banget";
         price2 = count2 * 20000;
-        cart.name.add(name2);
-        cart.total.add(price2);
+        if(count1 != 0){
+            cart.name.add(name2);
+            cart.total.add(price2);
+        }
     }//GEN-LAST:event_cartbtn2ActionPerformed
 
     private void cartbtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartbtn3ActionPerformed
         // TODO add your handling code here:
         name3 = "Es Teh Banget";
         price3 = count3 * 8000;
-        cart.name.add(name3);
-        cart.total.add(price3);
+        if(count1 != 0){
+            cart.name.add(name3);
+            cart.total.add(price3);
+        }
     }//GEN-LAST:event_cartbtn3ActionPerformed
 
     private void cartbtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartbtn4ActionPerformed
         // TODO add your handling code here:
         name4 = "Es Alpukat Banget";
         price4 = count4 * 15000;
-        cart.name.add(name4);
-        cart.total.add(price4);
+        if(count1 != 0){
+            cart.name.add(name4);
+            cart.total.add(price4);
+        }
     }//GEN-LAST:event_cartbtn4ActionPerformed
 
     private void cartbtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartbtn5ActionPerformed
         // TODO add your handling code here:
         name5 = "Kopi Banget";
         price5 = count5 * 12000;
-        cart.name.add(name5);
-        cart.total.add(price5);
+        if(count1 != 0){
+            cart.name.add(name5);
+            cart.total.add(price5);
+        }
     }//GEN-LAST:event_cartbtn5ActionPerformed
 
     private void cartbtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartbtn6ActionPerformed
         // TODO add your handling code here:
         name6 = "Fish n' Chips";
         price6 = count6 * 30000;
-        cart.name.add(name6);
-        cart.total.add(price6);
+        if(count1 != 0){
+            cart.name.add(name6);
+            cart.total.add(price6);
+        }
     }//GEN-LAST:event_cartbtn6ActionPerformed
 
     private void cartbtn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartbtn7ActionPerformed
         // TODO add your handling code here:
         name7 = "Hot Dog Banget";
         price7 = count7 * 18000;
-        cart.name.add(name7);
-        cart.total.add(price7);
+        if(count1 != 0){
+            cart.name.add(name7);
+            cart.total.add(price7);
+        }
     }//GEN-LAST:event_cartbtn7ActionPerformed
 
     private void tocartbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tocartbtnActionPerformed
