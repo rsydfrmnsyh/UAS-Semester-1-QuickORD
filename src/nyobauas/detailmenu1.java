@@ -12,22 +12,17 @@ import java.util.ArrayList;
  * @author rasyf
  */
 public class detailmenu1 extends javax.swing.JFrame {
+Cart cart;
+String name1;
+int order1;
 int counter11 = 0;
-String[] menu1 = new String[1];
-String[] price1 = new String[1];
 
     /**
      * Creates new form menu1
      */
     public detailmenu1() {
         initComponents();
-    }
-    
-    public String[] getMenu1() {
-        return menu1.clone();
-    }
-    public String[] getPrice1() {
-        return price1.clone();
+        cart = new Cart();
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -370,17 +365,14 @@ String[] price1 = new String[1];
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        int order1 = counter11 * 35000;
-        String name1 = "Combo Burger Banget";
-        String total1 = Integer.toString(order1);
-        menu1[0] = name1;
-        price1[0] = total1;
-        
+        order1 = counter11 * 35000;
+        name1 = "Combo Burger Banget";
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void cartbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartbtnActionPerformed
         // TODO add your handling code here:
-      Cart cart = new Cart();
+      cart.name[0] = name1;
+      cart.total[0] = order1;
       cart.setVisible(true);
       cart.setLocationRelativeTo(null);
       this.setVisible(false);

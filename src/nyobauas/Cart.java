@@ -16,8 +16,8 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Cart extends java.awt.Frame {
 detailmenu1 dm1 = new detailmenu1();
-String[] order = dm1.getMenu1();
-String[] total = dm1.getPrice1();
+public String [] name = new String[2];
+public int [] total = new int[2];
 
 
     /**
@@ -25,6 +25,9 @@ String[] total = dm1.getPrice1();
      */
     public Cart() {
         initComponents();
+    }
+    public Cart(String name1, int order1) {
+        
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -137,7 +140,7 @@ String[] total = dm1.getPrice1();
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel)carttable.getModel();
         model.addRow(new Object[] {
-            Arrays.toString(order),
+            Arrays.toString(name),
             Arrays.toString(total)
         });
     }//GEN-LAST:event_jButton1ActionPerformed
