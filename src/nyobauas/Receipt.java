@@ -16,6 +16,7 @@ public class Receipt extends java.awt.Frame {
     public Receipt() {
         initComponents();
     }
+    public Receipt(String name1, String name2, String name3, String name4, String name5, String name6, String name7, int price1,int price2,int price3,int price4,int price5,int price6,int price7) {};
 
     /**
      * This method is called from within the constructor to initialize the form.
