@@ -17,15 +17,26 @@ import javax.swing.table.DefaultTableModel;
 public class Cart extends java.awt.Frame {
 public ArrayList name = new ArrayList();
 public ArrayList total = new ArrayList();
+public ArrayList<Integer> totalPrice = new ArrayList<Integer>();
 int i = 0;
-
+int totalHarga = 0;
     /**
      * Creates new form Cart
      */
     public Cart() {
         initComponents();
+        if(totalPrice.size() != 0){
+            for(int i = 0; i < totalPrice.size(); i++){
+                totalHarga += totalPrice.get(i);
+            }
+        }
+        String totalHargaString = Integer.toString(totalHarga);
+        totalPriceLabel.setText("Total: Rp " + totalHargaString);
     }
     public Cart(String name1, String name2, String name3, String name4, String name5, String name6, String name7, int price1,int price2,int price3,int price4,int price5,int price6,int price7) {
+        
+    }
+    public Cart(int price1, int price2, int price3, int price4, int price5, int price6, int price7){
         
     }
     /**
@@ -39,7 +50,7 @@ int i = 0;
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        totalprice = new javax.swing.JLabel();
+        totalPriceLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         carttable = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
@@ -59,10 +70,9 @@ int i = 0;
         jLabel1.setText("                    Menu                                               Subtotal                    ");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0), 5));
 
-        totalprice.setBackground(new java.awt.Color(255, 102, 0));
-        totalprice.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        totalprice.setText("  Total: Rp. ... ");
-        totalprice.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
+        totalPriceLabel.setBackground(new java.awt.Color(255, 102, 0));
+        totalPriceLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        totalPriceLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
 
         carttable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -99,7 +109,7 @@ int i = 0;
                         .addGap(128, 128, 128)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(totalprice, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(totalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -116,7 +126,7 @@ int i = 0;
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(totalprice, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(totalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addGap(126, 126, 126))
         );
@@ -142,12 +152,6 @@ int i = 0;
                 total.get(i)
             });
         }
-//        do {
-//            model.addRow(new Object[] {
-//                name.get(i),
-//                total.get(i)
-//            });
-//        } while (i < 8);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -169,7 +173,7 @@ int i = 0;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel totalprice;
+    private javax.swing.JLabel totalPriceLabel;
     // End of variables declaration//GEN-END:variables
 
 }
