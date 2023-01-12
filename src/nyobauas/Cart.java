@@ -15,9 +15,10 @@ import javax.swing.table.DefaultTableModel;
  * @author raihan
  */
 public class Cart extends java.awt.Frame {
-public String [] name = new String[1];
-public int [] total = new int[1];
-
+public ArrayList name = new ArrayList();
+public ArrayList total = new ArrayList();
+int i = 0;
+int x = name.size();
 
     /**
      * Creates new form Cart
@@ -25,7 +26,7 @@ public int [] total = new int[1];
     public Cart() {
         initComponents();
     }
-    public Cart(String name1, int order1) {
+    public Cart(String name1, String name2, String name3, String name4, String name5, String name6, String name7, int price1,int price2,int price3,int price4,int price5,int price6,int price7) {
         
     }
     /**
@@ -136,10 +137,12 @@ public int [] total = new int[1];
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel)carttable.getModel();
-        model.addRow(new Object[] {
-            Arrays.toString(name),
-            Arrays.toString(total)
-        });
+        do {
+            model.addRow(new Object[] {
+                name.get(i),
+                total.get(i)
+            });
+        } while (i <= x);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

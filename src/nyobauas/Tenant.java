@@ -9,6 +9,7 @@ package nyobauas;
  * @author MY COMPUTER
  */
 public class Tenant extends javax.swing.JFrame {
+  
 
     /**
      * Creates new form Tenant
@@ -16,6 +17,7 @@ public class Tenant extends javax.swing.JFrame {
     public Tenant(String name) {
         initComponents();
         welcomelabel.setText("Welcome, " + name + "!");
+        
     }
 
     /**
@@ -74,6 +76,8 @@ public class Tenant extends javax.swing.JFrame {
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bubur.png"))); // NOI18N
 
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/undo.png"))); // NOI18N
+        jButton9.setBorderPainted(false);
+        jButton9.setContentAreaFilled(false);
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -81,6 +85,8 @@ public class Tenant extends javax.swing.JFrame {
         });
 
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redo.png"))); // NOI18N
+        jButton10.setBorderPainted(false);
+        jButton10.setContentAreaFilled(false);
 
         welcomelabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         welcomelabel.setText("Welcome, ... !");
@@ -164,7 +170,7 @@ public class Tenant extends javax.swing.JFrame {
                                 .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(207, 207, 207))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(210, 210, 210))))))
         );
 
@@ -192,7 +198,7 @@ public class Tenant extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        MenuView menu = new MenuView();
+        Menu menu = new Menu();
         menu.setLocationRelativeTo(null);
         menu.setVisible(true);
         this.setVisible(false);
