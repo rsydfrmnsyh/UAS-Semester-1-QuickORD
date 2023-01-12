@@ -18,7 +18,6 @@ public class Cart extends java.awt.Frame {
 public ArrayList name = new ArrayList();
 public ArrayList total = new ArrayList();
 int i = 0;
-int x = name.size();
 
     /**
      * Creates new form Cart
@@ -142,7 +141,7 @@ int x = name.size();
                 name.get(i),
                 total.get(i)
             });
-        } while (i <= x);
+        } while (i < 8);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
