@@ -5,6 +5,7 @@
 package nyobauas;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 /**
  * @author raihansltn
@@ -12,12 +13,18 @@ import java.lang.reflect.Array;
  */
 public class detailmenu1 extends javax.swing.JFrame {
 int counter11 = 0;
+String[] menu1 = new String[1];
+String[] price1 = new String[1];
 
     /**
      * Creates new form menu1
      */
     public detailmenu1() {
         initComponents();
+    }
+    
+    public String[] getMenu1() {
+        return menu1.clone();
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -320,19 +327,11 @@ int counter11 = 0;
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        
-        String count = counter3.getText();
-        double countertext = Double.parseDouble(count);
-        countertext--;
-        counter3.setText(counter11 + " ");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        String count = counter3.getText();
-        double countertext = Double.parseDouble(count);
-        countertext++;
-        counter3.setText(count + " ");
+ 
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -341,7 +340,7 @@ int counter11 = 0;
         String count = counter3.getText();
         double countertext = Double.parseDouble(count);
         countertext--;
-        counter3.setText(counter11 + " ");
+        counter3.setText(counter11 + "");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -350,7 +349,7 @@ int counter11 = 0;
         String count = counter3.getText();
         double countertext = Double.parseDouble(count);
         countertext++;
-        counter3.setText(counter11 + " ");
+        counter3.setText(counter11 + "");
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void backbuttondm1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttondm1ActionPerformed
@@ -371,15 +370,19 @@ int counter11 = 0;
         String cart1 = counter3.getText();
         int ordertext1 = Integer.parseInt(cart1);
         int order1 = ordertext1 * 35000;
-        String[] ordername = {"Paket Burger Banget"};
-        int[] counts = new int[counter11];
-        int price1 = counter11 * 35000;
+        String name1 = "Combo Burger Banget";
+        String total1 = Integer.toString(order1);
+        menu1[0] = name1;
+        price1[0] = total1;
+        
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void cartbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cartbtnActionPerformed
         // TODO add your handling code here:
-      
-        
+      Cart cart = new Cart();
+      cart.setVisible(true);
+      cart.setLocationRelativeTo(null);
+      this.setVisible(false);
     }//GEN-LAST:event_cartbtnActionPerformed
 
     /**
