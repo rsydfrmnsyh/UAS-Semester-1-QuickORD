@@ -26,6 +26,9 @@ String[] price1 = new String[1];
     public String[] getMenu1() {
         return menu1.clone();
     }
+    public String[] getPrice1() {
+        return price1.clone();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -367,9 +370,7 @@ String[] price1 = new String[1];
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        String cart1 = counter3.getText();
-        int ordertext1 = Integer.parseInt(cart1);
-        int order1 = ordertext1 * 35000;
+        int order1 = counter11 * 35000;
         String name1 = "Combo Burger Banget";
         String total1 = Integer.toString(order1);
         menu1[0] = name1;

@@ -4,6 +4,8 @@
  */
 package nyobauas;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -13,23 +15,16 @@ import javax.swing.table.DefaultTableModel;
  * @author raihan
  */
 public class Cart extends java.awt.Frame {
-ArrayList<String> price = new ArrayList<>();
 detailmenu1 dm1 = new detailmenu1();
 String[] order = dm1.getMenu1();
+String[] total = dm1.getPrice1();
+
+
     /**
      * Creates new form Cart
      */
     public Cart() {
         initComponents();
-    }
-    
-    public void AddRowToJTable(Object[] dataRow[]) {
-        DefaultTableModel model = (DefaultTableModel)carttable.getModel();
-        detailmenu1 dm1 = new detailmenu1();
-        String[] order = dm1.getMenu1();
-        model.addRow(new Object[] {
-            order
-        });
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -45,6 +40,7 @@ String[] order = dm1.getMenu1();
         totalprice = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         carttable = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -76,20 +72,31 @@ String[] order = dm1.getMenu1();
         ));
         jScrollPane2.setViewportView(carttable);
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(totalprice, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane2)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 583, Short.MAX_VALUE))))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 583, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(totalprice, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -104,9 +111,14 @@ String[] order = dm1.getMenu1();
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(totalprice, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(126, 126, 126))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(totalprice, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jButton1)))
+                .addGap(106, 106, 106))
         );
 
         add(jPanel1, java.awt.BorderLayout.WEST);
@@ -121,6 +133,15 @@ String[] order = dm1.getMenu1();
         System.exit(0);
     }//GEN-LAST:event_exitForm
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel)carttable.getModel();
+        model.addRow(new Object[] {
+            Arrays.toString(order),
+            Arrays.toString(total)
+        });
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -134,7 +155,8 @@ String[] order = dm1.getMenu1();
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private static javax.swing.JTable carttable;
+    private javax.swing.JTable carttable;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
