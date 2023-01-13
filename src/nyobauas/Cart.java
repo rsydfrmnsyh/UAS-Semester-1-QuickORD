@@ -17,21 +17,13 @@ import javax.swing.table.DefaultTableModel;
 public class Cart extends java.awt.Frame {
 public ArrayList name = new ArrayList();
 public ArrayList total = new ArrayList();
-public ArrayList<Integer> totalPrice = new ArrayList<Integer>();
+int sum = 0;
 int i = 0;
-int totalHarga = 0;
     /**
      * Creates new form Cart
      */
     public Cart() {
         initComponents();
-        if(totalPrice.size() != 0){
-            for(int i = 0; i < totalPrice.size(); i++){
-                totalHarga += totalPrice.get(i);
-            }
-        }
-        String totalHargaString = Integer.toString(totalHarga);
-        totalPriceLabel.setText("Total: Rp " + totalHargaString);
     }
     public Cart(String name1, String name2, String name3, String name4, String name5, String name6, String name7, int price1,int price2,int price3,int price4,int price5,int price6,int price7) {
         
@@ -84,6 +76,7 @@ int totalHarga = 0;
         ));
         jScrollPane2.setViewportView(carttable);
 
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
         jButton1.setText("Print Receipt");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 0)));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -97,19 +90,16 @@ int totalHarga = 0;
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane2)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 583, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addComponent(jButton1)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(totalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(totalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 583, Short.MAX_VALUE))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -125,9 +115,9 @@ int totalHarga = 0;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(totalPriceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(totalPriceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(126, 126, 126))
         );
 
@@ -152,6 +142,10 @@ int totalHarga = 0;
                 total.get(i)
             });
         }
+        for (int i = 0; i<carttable.getRowCount(); i++){
+            sum = sum + Integer.parseInt(carttable.getValueAt(i, 1).toString());
+        }
+        totalPriceLabel.setText("Total : " + Integer.toString(sum));;
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
