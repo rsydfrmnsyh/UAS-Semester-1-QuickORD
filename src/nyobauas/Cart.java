@@ -160,7 +160,7 @@ int i = 0;
         for (int i = 0; i<carttable.getRowCount(); i++){
             sum = sum + Integer.parseInt(carttable.getValueAt(i, 1).toString());
         }
-        totalPriceLabel.setText("Total : " + Integer.toString(sum));;
+        totalPriceLabel.setText("Total : Rp. " + Integer.toString(sum));;
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
